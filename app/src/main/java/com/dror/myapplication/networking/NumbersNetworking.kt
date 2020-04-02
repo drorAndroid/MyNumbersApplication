@@ -1,11 +1,7 @@
-package com.dror.mygallery.networking
+package com.dror.myapplication.networking
 
-import okhttp3.Dispatcher
-import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.util.concurrent.Executors
-
 
 class NumbersNetworking {
     companion object {

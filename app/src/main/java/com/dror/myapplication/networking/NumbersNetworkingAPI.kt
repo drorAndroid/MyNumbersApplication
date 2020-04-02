@@ -1,4 +1,4 @@
-package com.dror.mygallery.networking
+package com.dror.myapplication.networking
 
 import retrofit2.Call
 import retrofit2.http.GET

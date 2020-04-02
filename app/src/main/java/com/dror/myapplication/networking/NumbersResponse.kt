@@ -1,4 +1,4 @@
-package com.dror.mygallery.networking
+package com.dror.myapplication.networking
 
 import com.google.gson.annotations.Expose
 

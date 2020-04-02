@@ -1,9 +1,9 @@
 package com.dror.myapplication.repository
 
 import androidx.lifecycle.MutableLiveData
-import com.dror.mygallery.networking.NumbersNetworking
-import com.dror.mygallery.networking.NumbersNetworkingAPI
-import com.dror.mygallery.networking.NumbersResponse
+import com.dror.myapplication.networking.NumbersNetworking
+import com.dror.myapplication.networking.NumbersNetworkingAPI
+import com.dror.myapplication.networking.NumbersResponse
 
 class Repository {
     private var network: NumbersNetworkingAPI? = null
