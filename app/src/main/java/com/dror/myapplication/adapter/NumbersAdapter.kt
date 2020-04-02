@@ -9,13 +9,17 @@ import androidx.recyclerview.widget.RecyclerView
 import com.dror.myapplication.R
 
 class NumbersAdapter(val c: Activity, var numbersList: List<Int>): RecyclerView.Adapter<NumbersAdapter.ViewHolder>() {
-    private var checkedNumbers: List<Int> = listOf()
+    private var numbersHashSet: HashSet<Int>
     private val itemViewTypeSum0 = 100
     private val itemViewTypeNonSum0 = 200
     private val targetSum = 0
 
+    init {
+        numbersHashSet = numbersList.toHashSet()
+    }
+
     override fun getItemViewType(position: Int): Int {
-        if(numbersList[position] != 0 && numbersList.toHashSet().contains(targetSum - numbersList[position])) {
+        if(numbersList[position] != 0 && numbersHashSet.contains(targetSum - numbersList[position])) {
             return itemViewTypeSum0
         }
 
@@ -27,8 +31,9 @@ class NumbersAdapter(val c: Activity, var numbersList: List<Int>): RecyclerView.
     }
 
     fun setNumbers(numbers: List<Int>) {
-        this.checkedNumbers = listOf()
         this.numbersList = numbers
+        this.numbersHashSet = numbersList.toHashSet()
+
         notifyDataSetChanged()
     }
 
